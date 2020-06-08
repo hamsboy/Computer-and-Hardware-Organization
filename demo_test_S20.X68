@@ -24,30 +24,31 @@ NOP
     LEA     (A0),A7
     LEA     (A5),A7
     LEA     (A7),A7
-    CLR.B     D0
-    CLR.B     D7
-    CLR.W     D0
-    CLR.W     D7
-    CLR.L     D0
-    CLR.L     D7
-    CLR.B     (A0)
-    CLR.B     (A7)
-    CLR.W     (A0)
-    CLR.W     (A7)
-    CLR.L     (A0)
-    CLR.L     (A7)
-    CLR.B     (A0)+
-    CLR.B     (A7)+
-    CLR.W     (A0)+
-    CLR.W     (A7)+
-    CLR.L     (A0)+
-    CLR.L     (A7)+
-    CLR.B     -(A0)
-    CLR.B     -(A7)
-    CLR.W     -(A0)
-    CLR.W     -(A7)
-    CLR.L     -(A0)
-    CLR.L     -(A7)
+    
+*    CLR.B     D0
+*    CLR.B     D7
+*    CLR.W     D0
+*    CLR.W     D7
+*    CLR.L     D0
+*    CLR.L     D7
+*    CLR.B     (A0)
+*    CLR.B     (A7)
+*    CLR.W     (A0)
+*    CLR.W     (A7)
+*    CLR.L     (A0)
+*    CLR.L     (A7)
+*    CLR.B     (A0)+
+*    CLR.B     (A7)+
+*    CLR.W     (A0)+
+*    CLR.W     (A7)+
+*    CLR.L     (A0)+
+*    CLR.L     (A7)+
+*    CLR.B     -(A0)
+*    CLR.B     -(A7)
+*    CLR.W     -(A0)
+*    CLR.W     -(A7)
+*    CLR.L     -(A0)
+*    CLR.L     -(A7)
     MOVE.B    D0,D1
     MOVE.B    D0,(A0)
     MOVE.B    D0,(A0)+
@@ -106,7 +107,7 @@ NOP
     MOVE.L    -(A0),-(A1)
     
 
-        MOVEM.W   A1-A7,-(A1)
+    MOVEM.W   A1-A7,-(A1)
     MOVEM.L   D1-D7,-(A1)
     MOVEM.W   A1/D7,-(A1)
     MOVEM.L   A1/D7,-(A1)
@@ -122,16 +123,8 @@ NOP
     MOVEM.L   (A1),D1-D7
     MOVEM.W   (A1),A1/D7
     MOVEM.L   (A1),A1/D7
-    MOVEA.W    D0,A0
-    MOVEA.W    A0,A0
-    MOVEA.W    (A0),A0
-    MOVEA.W    (A0)+,A0
-    MOVEA.W    -(A0),A0
-    MOVEA.L    D0,A0
-    MOVEA.L    A0,A0
-    MOVEA.L    (A0),A0
-    MOVEA.L    (A0)+,A0
-    MOVEA.L    -(A0),A0  
+   
+ 
     ADD.B     D1,D2
     ADD.B     D1,(A1)
     ADD.B     D1,(A1)+
@@ -186,14 +179,14 @@ NOP
     SUB.L     (A1),D1
     SUB.L     (A1)+,D1
     SUB.L     -(A1),D1    
-    MULS.W    D0,D1
-    MULS.W    (A0),D1
-    MULS.W    -(A0),D1
-    MULS.W    (A0)+,D1
-    DIVU.W    D0,D1
-    DIVU.W    (A0),D1
-    DIVU.W    -(A0),D1
-    DIVU.W    (A0)+,D1
+*    MULS.W    D0,D1
+*    MULS.W    (A0),D1
+*    MULS.W    -(A0),D1
+*    MULS.W    (A0)+,D1
+*    DIVU.W    D0,D1
+*    DIVU.W    (A0),D1
+*    DIVU.W    -(A0),D1
+*    DIVU.W    (A0)+,D1
     AND.B     D1,D2
     AND.B     D1,(A1)
     AND.B     D1,(A1)+
@@ -272,29 +265,29 @@ NOP
     ROR.W     (A1)+
     ROR.W     -(A1)
     ROR.L     D1,D2    
-    CMP.B    D0,D1
-    CMP.B    (A0),D1
-    CMP.B    -(A0),D1
-    CMP.B    (A0)+,D1
-    CMP.W    D0,D1
-    CMP.W    A0,D1
-    CMP.W    (A0),D1
-    CMP.W    -(A0),D1
-    CMP.W    (A0)+,D1
-    CMP.L    D0,D1
-    CMP.L    A0,D1
-    CMP.L    (A0),D1
-    CMP.L    -(A0),D1
-    CMP.L    (A0)+,D1
-    BCC.B     label1
-    BCC.B     label2
+*    CMP.B    D0,D1
+*    CMP.B    (A0),D1
+*    CMP.B    -(A0),D1
+*    CMP.B    (A0)+,D1
+*    CMP.W    D0,D1
+*    CMP.W    A0,D1
+*    CMP.W    (A0),D1
+*    CMP.W    -(A0),D1
+*    CMP.W    (A0)+,D1
+*    CMP.L    D0,D1
+*    CMP.L    A0,D1
+*    CMP.L    (A0),D1
+*    CMP.L    -(A0),D1
+*    CMP.L    (A0)+,D1
+*    BCC.B     label1
+*    BCC.B     label2
     BGT.B     label1
     BGT.B     label2
     BLE.B     label1
     BLE.B     label2
     BCC.W     label1
-    BCC.W     label2
-    BCC.W     label3
+*    BCC.W     label2
+*    BCC.W     label3
     BGT.W     label1
     BGT.W     label2
     BGT.W     label3
@@ -315,38 +308,38 @@ label1
     LEA       $12,A0
     LEA       $1234,A0
     LEA       $12345678,A0
-    CLR.B     $12
-    CLR.B     $1234
-    CLR.B     $12345678
+*    CLR.B     $12
+*    CLR.B     $1234
+*    CLR.B     $12345678
 label2
-    CLR.W     $12
-    CLR.W     $1234
-    CLR.W     $12345678
-    CLR.L     $12
-    CLR.L     $1234
-    CLR.L     $12345678
+*    CLR.W     $12
+*    CLR.W     $1234
+*    CLR.W     $12345678
+*    CLR.L     $12
+*    CLR.L     $1234
+*    CLR.L     $12345678
     MOVEQ     #$0,D0
     MOVEQ     #$12,D0
     MOVEQ     #$FF,D0
-    ADDI.B    #$12,D1
-    ADDI.B    #$12,(A0)
-    ADDI.B    #$12,(A0)+
-    ADDI.B    #$12,-(A0)
-    ADDI.B    #$12,$1234
+*    ADDI.B    #$12,D1
+*    ADDI.B    #$12,(A0)
+*    ADDI.B    #$12,(A0)+
+*    ADDI.B    #$12,-(A0)
+*    ADDI.B    #$12,$1234
 label3
-    ADDI.B    #$12,$12345678
-    ADDI.W    #$1234,D1
-    ADDI.W    #$1234,(A0)
-    ADDI.W    #$1234,(A0)+
-    ADDI.W    #$1234,-(A0)
-    ADDI.W    #$1234,$1234
-    ADDI.W    #$1234,$12345678
-    ADDI.L    #$12345678,D1
-    ADDI.L    #$12345678,(A0)
-    ADDI.L    #$12345678,(A0)+
-    ADDI.L    #$12345678,-(A0)
-    ADDI.L    #$12345678,$1234
-    ADDI.L    #$12345678,$12345678
+*    ADDI.B    #$12,$12345678
+*    ADDI.W    #$1234,D1
+*    ADDI.W    #$1234,(A0)
+*    ADDI.W    #$1234,(A0)+
+*    ADDI.W    #$1234,-(A0)
+*    ADDI.W    #$1234,$1234
+*    ADDI.W    #$1234,$12345678
+*    ADDI.L    #$12345678,D1
+*    ADDI.L    #$12345678,(A0)
+*    ADDI.L    #$12345678,(A0)+
+*    ADDI.L    #$12345678,-(A0)
+*    ADDI.L    #$12345678,$1234
+*    ADDI.L    #$12345678,$12345678
     ADDQ      #$1,D0
     ADDQ      #$3,D0
     ADDQ      #$8,D0
@@ -472,14 +465,14 @@ label3
     SUB.L     $1234,D1
     SUB.L     $12345678,D1
     SUB.L     #$12345678,D1
-    MULS.W    $12,D1
-    MULS.W    $1234,D1
-    MULS.W    $12345678,D1
-    MULS.W    #$1234,D1
-    DIVU.W    $12,D1
-    DIVU.W    $1234,D1
-    DIVU.W    $12345678,D1
-    DIVU.W    #$1234,D1
+*    MULS.W    $12,D1
+*    MULS.W    $1234,D1
+*    MULS.W    $12345678,D1
+*    MULS.W    #$1234,D1
+*    DIVU.W    $12,D1
+*    DIVU.W    $1234,D1
+*    DIVU.W    $12345678,D1
+*    DIVU.W    #$1234,D1
     AND.B     D1,$12
     AND.B     D1,$1234
     AND.B     D1,$12345678
@@ -520,23 +513,24 @@ label3
     ROL.W     $1234
     ROL.W     $12345678
 label4    CMP.B     $12,D1
-    CMP.B     $1234,D1
-    CMP.B     $12345678,D1
-    CMP.B     #$12,D1
-    CMP.W     $12,D1
-    CMP.W     $1234,D1
-    CMP.W     $12345678,D1
-    CMP.W     #$1234,D1
-    CMP.L     $12,D1
-    CMP.L     $1234,D1
-    CMP.L     $12345678,D1
-    CMP.L     #$12345678,D1
-    BCC.B     label4
+    
+*    CMP.B     $1234,D1
+*    CMP.B     $12345678,D1
+*    CMP.B     #$12,D1
+*    CMP.W     $12,D1
+*    CMP.W     $1234,D1
+*    CMP.W     $12345678,D1
+*    CMP.W     #$1234,D1
+*    CMP.L     $12,D1
+*    CMP.L     $1234,D1
+*    CMP.L     $12345678,D1
+*    CMP.L     #$12345678,D1
+*    BCC.B     label4
     BGT.B     label4
     BLE.B     label4
-    BCC.W     label1
-    BCC.W     label2
-    BCC.W     label3
+*    BCC.W     label1
+*    BCC.W     label2
+*    BCC.W     label3
     BGT.W     label1
     BGT.W     label2
     BGT.W     label3
@@ -548,8 +542,7 @@ label4    CMP.B     $12,D1
     JSR       label3
     MOVEA     D1,A1
     ADDA      D1,A1
-    BTST      #1,D1
-
+*    BTST      #1,D1
 * Put program code here
 
     SIMHALT             ; halt simulator
@@ -557,6 +550,7 @@ label4    CMP.B     $12,D1
 * Put variables and constants here
 
     END    START        ; last line of source
+
 
 
 
